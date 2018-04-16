@@ -25,22 +25,40 @@ B.	How to run our code
 3.	Put all the RData files in the same directory.
 4.	Open main.cpp, in the main function, change RData file directory to the directory in Step3
 5.	In main.cpp, look at row 88 to 93. If you want to test our code:
+
 a)	If you want to test insert back missing data: 
+
 (1)	In main.cpp, comment "UploadTestData(rhash);"
+
 (2)	Uncomment "TestCaseMissData(rhash);" and "InsertMissingData(rhash);"
+
 (3)	Run the code. This will create a random test case, and insert the missing data back.
+
 b)	If you want to test correct inaccurate data: 
+
 (1)	In main.cpp, comment "UploadTestData(rhash);"
+
 (2)	Uncomment "TestCaseFalseData(rhash);" and "InsertMissingData(rhash);"
+
 (3)	Run the code. This will create a random test case, and correct some intentionally modified datafields.
+
 c)	If you want to upload all data from RData file to ElasticSearch:
+
 (1)	In main.cpp, uncomment "UploadTestData(rhash);"
+
 (2)	Comment "CreateTestCase(rhash);" and "InsertMissingData(rhash);".
+
 (3)	Run the code. This will read all RData files in the directory and upload all data onto ElasticSearch.
+
 d)	If you already have some data on ElasticSearch and a corresponding RData file, and you want to insert missing data back: 
+
 (1)	In main.cpp, comment "UploadTestData(rhash);" and "CreateTestCase(rhash);”
+
 (2)	Uncomment "InsertMissingData(rhash);".
+
 (3)	Run the code. This will check missing data and insert missing data back.	
+
 e)	If you only want to test the functionality of certain classes 
+
 (1)	See TestCase.cpp for simple test cases of each individual class
 
